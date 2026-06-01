@@ -1,0 +1,8 @@
+#Copyright(c) 2025 Group 8
+#SPDX - License - Identifier : Apache - 2.0
+
+config SENSOR_NODE
+    bool "Sensor Node Driver"
+    default y
+    help
+      UART driver for home security sensor node.

@@ -1,0 +1,20 @@
+
+description: "Zephyr sensor node device"
+
+compatible: "zephyr,sensor-node"
+
+include: base.yaml
+
+properties:
+  uart-dev:
+    type: phandle
+    required: true
+    description: "UART device used by the sensor node driver"
+
+  intr-gpios:
+    type: phandle-array
+    required: false
+    description: >
+      GPIO pin connected to the sensor node interrupt line (INTR_PIN on the
+      sensor node Pico). The driver configures this as an input and arms a
+      rising-edge interrupt when sensor_trigger_set() is called.
